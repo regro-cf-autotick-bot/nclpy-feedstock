@@ -1,5 +1,5 @@
 {% set name = "nclpy" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.10" %}
 
 package:
   name: "{{ name|lower }}"
@@ -19,6 +19,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - earthengine-api
     - folium
     - ipyleaflet
     - pyshp
