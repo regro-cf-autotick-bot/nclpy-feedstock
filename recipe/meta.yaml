@@ -24,7 +24,7 @@ requirements:
     - ipyfilechooser
     - ipyleaflet
     - pyshp
-    - python
+    - python >=3.6
     - python-box
 
 test:
