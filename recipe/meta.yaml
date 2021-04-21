@@ -1,5 +1,5 @@
 {% set name = "nclpy" %}
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 0a19d99f2df42f99e2eba2382c90a20f89080408cb7d06d465378171cabdd678
+  sha256: 6185b01f90cc71364ee9bdb8718f0a46248c93bdfe94a1c28189cc36cce1cbd5
 
 build:
   noarch: python
@@ -21,9 +21,11 @@ requirements:
   run:
     - earthengine-api
     - folium
+    - ipyfilechooser
     - ipyleaflet
     - pyshp
     - python >=3.6
+    - python-box
 
 test:
   imports:
