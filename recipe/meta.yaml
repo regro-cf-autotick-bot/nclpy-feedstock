@@ -11,23 +11,25 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - earthengine-api
     - folium
     - ipyfilechooser
     - ipyleaflet
     - pyshp
-    - python >=3.6
+    - python >={{ python_min }}
     - python-box
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nclpy
 
